@@ -1172,3 +1172,10 @@ body.cart-open { overflow: hidden; }
   .has-blobs::before { width: 320px; height: 320px; left: -40px; }
   .has-blobs::after { width: 380px; height: 380px; }
 }
+
+/* Mobile: stop sideways scroll / zoom-out from off-screen elements */
+html, body { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
+.has-blobs { overflow-x: clip; }
+.cart-drawer:not(.open) { visibility: hidden; }
+.cart-drawer { transition: transform .35s ease, visibility 0s linear .35s; }
+.cart-drawer.open { transition: transform .35s ease, visibility 0s; }
