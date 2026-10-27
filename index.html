@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soft Hours | Period comfort for lazy days</title>
+  <meta name="description" content="Soft Hours sells period comfort gear for women in Australia. Heating belts, period undies, eye masks and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement">
+    <span>Free shipping over A$60 ✦ Ships to Aus in about 1 to 2 weeks</span>
+  </div>
+
+  <header class="nav">
+    <a class="logo" href="#top">Soft <em>Hours</em></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#moods">Shop by mood</a>
+      <a href="#shop">Collection</a>
+      <a href="#about">Our story</a>
+      <a href="#how">Shipping</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="cart-btn" href="#cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+      <button class="menu-btn" id="menu-btn" aria-label="Menu" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top" class="has-blobs">
+    <section class="hero">
+      <img class="hero-img" src="assets/lifestyle/hero.jpg" alt="Cozy blush bedding with silk eye mask and knitted hot water bottle" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">For the couch days</span>
+        <h1>Soft hours, <span class="script">just for you</span>.</h1>
+        <p>For the days you cancel plans and stay in your hoodie. Soft, warm bits for your cycle, packed cute.</p>
+        <a class="btn btn-lg" href="#shop">Shop the collection</a>
+      </div>
+    </section>
+
+    <div class="trust trust-cute">
+      <p>Soft packaging · 30-day returns on unused items · We reply from Australia</p>
+    </div>
+
+    <!-- Shop by mood -->
+    <section class="moods" id="moods">
+      <div class="section-inner">
+        <p class="section-label">Shop by mood</p>
+        <h2 class="section-title">What are you <span class="script">after</span>?</h2>
+        <p class="section-lede">Pick a vibe and jump to the product.</p>
+      </div>
+      <div class="mood-track" id="mood-track">
+        <a class="mood-card" href="#product-belt">
+          <img src="assets/moods/onthego.jpg" alt="On-the-go comfort flat lay" />
+          <div class="mood-overlay">
+            <h3>Out and about</h3>
+            <p>Warmth you can wear under clothes.</p>
+            <span class="btn">Warm Glow Belt</span>
+          </div>
+        </a>
+        <a class="mood-card" href="#product-rest">
+          <img src="assets/moods/rest.jpg" alt="Rest night-in mood flat lay" />
+          <div class="mood-overlay">
+            <h3>Stay home</h3>
+            <p>Eye mask, knit bottle, early night.</p>
+            <span class="btn">Stay-home picks</span>
+          </div>
+        </a>
+        <a class="mood-card" href="#product-gift">
+          <img src="assets/moods/gift.jpg" alt="Giftable care package flat lay" />
+          <div class="mood-overlay">
+            <h3>Easy gift</h3>
+            <p>Looks decent in a gift bag.</p>
+            <span class="btn">Gift picks</span>
+          </div>
+        </a>
+      </div>
+      <div class="mood-dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-inner about-grid">
+        <div class="about-card reveal">
+          <img src="assets/lifestyle/flatlay.jpg" alt="Flat lay of Soft Hours comfort essentials" />
+        </div>
+        <div class="about-copy reveal">
+          <p class="section-label">Why we exist</p>
+          <h2 class="section-title">Started for couch days.</h2>
+          <p>We got sick of period gear that looked clinical or felt cheap. Soft Hours is the warm, soft stuff we actually want on the couch.</p>
+          <p>Blush tones, soft fabrics, nothing try-hard. Built for a quiet night in, or chucking in a gift bag for a mate.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="ribbon ribbon-wide" aria-hidden="true"></div>
+
+    <section class="life-grid" id="photos">
+      <div class="section-inner">
+        <p class="section-label">Around the house</p>
+        <h2 class="section-title">How it actually looks</h2>
+        <p class="section-lede">Real-home vibes. Soft light. No studio gloss.</p>
+        <div class="life-grid-photos">
+          <figure><img src="assets/grid/couch.jpg" alt="Couch night with knit bottle" /><figcaption>Couch night</figcaption></figure>
+          <figure><img src="assets/grid/bedside.jpg" alt="Bedside table with eye mask and tea" /><figcaption>Bedside clutter</figcaption></figure>
+          <figure><img src="assets/grid/tote.jpg" alt="Tote bag with comfort gear spilled out" /><figcaption>Bag dump</figcaption></figure>
+          <figure><img src="assets/grid/flatlay.jpg" alt="Soft Hours comfort flat lay" /><figcaption>The soft pile</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured products as hero blocks -->
+    <section class="features" id="shop">
+      <div class="section-inner">
+        <p class="section-label">The collection</p>
+        <h2 class="section-title">The <span class="script">lineup</span></h2>
+        <p class="section-lede">Swipe the photos, chuck what you like in the bag. Free shipping over A$60.</p>
+      </div>
+
+      <!-- 1 Warm Glow Belt -->
+      <article class="feature reveal" id="product-belt" data-product-id="warm-glow-belt" data-id="warm-glow-belt" data-name="Warm Glow Belt" data-price="79">
+        <div class="feature-media">
+          <span class="feature-badge">cozy pick</span>
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+                        <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/carousel/belt-life.jpg" alt="Warm Glow Belt in use" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/belt-product.jpg" alt="Warm Glow Belt close up" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/belt-casual.jpg" alt="Warm Glow Belt on the bed" /></div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="feature-body">
+          <p class="feature-eyebrow">Our favourite</p>
+          <h3>Warm Glow Belt</h3>
+          <p class="product-copy">This is the one people keep coming back for. Strap it on under a hoodie, press heat, and stay on the couch. It is cordless and rechargeable, with a soft massage setting if you want that too.</p>
+          <p class="product-copy">Comes in blush, lilac or cream. Looks more like a cute accessory than gym gear.</p>
+          <div class="swatches" aria-label="Colour options">
+            <span class="swatch-label">Colour</span>
+            <button class="swatch active" style="background:#ff7eb3" title="Blush" type="button"></button>
+            <button class="swatch" style="background:#c995e0" title="Lilac" type="button"></button>
+            <button class="swatch" style="background:#f5e6dc" title="Cream" type="button"></button>
+          </div>
+          <dl class="specs">
+            <div><dt>Details</dt><dd>Cordless heating + massage belt · rechargeable · blush / lilac / cream</dd></div>
+            <div><dt>Shipping</dt><dd>About 1 to 2 weeks to Aus · free over A$60</dd></div>
+          </dl>
+          <div class="price-row">
+            <div class="price">A$79 <small>AUD</small></div>
+            <span class="ship-nudge">Free shipping over A$60</span>
+          </div>
+          <p class="addon-line">Grab <strong>Warming Patches</strong> too if you leave the house a lot.</p>
+          <button class="btn btn-block btn-lg add-to-cart" type="button" data-id="warm-glow-belt" data-name="Warm Glow Belt" data-price="79">Add to cart · A$79</button>
+        </div>
+      </article>
+
+      <!-- 2 Cloud Briefs -->
+      <article class="feature reverse reveal" id="product-gift" data-product-id="cloud-briefs" data-id="cloud-briefs" data-name="Cloud Briefs 3-Pack" data-price="54">
+        <div class="feature-media">
+          <span class="feature-badge lilac">new</span>
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+                        <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/carousel/undies-life.jpg" alt="Cloud Briefs gift unboxing" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/undies-product.jpg" alt="Cloud Briefs pack" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/undies-casual.jpg" alt="Cloud Briefs at home" /></div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="feature-body">
+          <p class="feature-eyebrow">New in</p>
+          <h3>Cloud Briefs · 3-Pack</h3>
+          <p class="product-copy">Three pairs of leakproof period undies in a soft cotton-feel fabric. They are the ones you forget you are wearing, which is kind of the whole point.</p>
+          <p class="product-copy">Dusty rose, blush or soft black. Wash cold and hang dry.</p>
+          <div class="swatches" aria-label="Colour options">
+            <span class="swatch-label">Colour</span>
+            <button class="swatch active" style="background:#e8a0b8" title="Dusty rose" type="button"></button>
+            <button class="swatch" style="background:#ffb6c9" title="Blush" type="button"></button>
+            <button class="swatch" style="background:#2b2b2b" title="Soft black" type="button"></button>
+          </div>
+          <dl class="specs">
+            <div><dt>Details</dt><dd>3-pack leakproof period undies · cold wash, hang dry</dd></div>
+            <div><dt>Shipping</dt><dd>About 1 to 2 weeks to Aus · A$6 more unlocks free shipping</dd></div>
+          </dl>
+          <div class="price-row">
+            <div class="price">A$54 <small>AUD</small></div>
+            <span class="ship-nudge">A$6 more gets free shipping</span>
+          </div>
+          <p class="addon-line">Add the <strong>Warm Glow Belt</strong> and shipping is free.</p>
+          <button class="btn btn-block btn-lg add-to-cart" type="button" data-id="cloud-briefs" data-name="Cloud Briefs 3-Pack" data-price="54">Add to cart · A$54</button>
+        </div>
+      </article>
+
+      <!-- 3 Eye mask -->
+      <article class="feature reveal" id="product-rest" data-product-id="silk-eye-mask" data-id="silk-eye-mask" data-name="Silk Soft Eye Mask" data-price="22">
+        <div class="feature-media">
+          <span class="feature-badge">little treat</span>
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+                        <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/carousel/mask-life.jpg" alt="Silk Soft Eye Mask in use" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/mask-product.jpg" alt="Silk Soft Eye Mask close up" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/mask-casual.jpg" alt="Silk Soft Eye Mask on a pillow" /></div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="feature-body">
+          <p class="feature-eyebrow">Little treat</p>
+          <h3>Silk Soft Eye Mask</h3>
+          <p class="product-copy">A mulberry silk eye mask for when the afternoon hits and you need twenty minutes with the blinds shut. Cool on your face, light enough for a weekend bag.</p>
+          <div class="swatches" aria-label="Colour options">
+            <span class="swatch-label">Colour</span>
+            <button class="swatch active" style="background:#ff7eb3" title="Blush" type="button"></button>
+            <button class="swatch" style="background:#c995e0" title="Lilac" type="button"></button>
+            <button class="swatch" style="background:#f7e7d8" title="Champagne" type="button"></button>
+          </div>
+          <dl class="specs">
+            <div><dt>Details</dt><dd>Mulberry silk · elastic strap · blush / lilac / champagne</dd></div>
+            <div><dt>Shipping</dt><dd>About 1 to 2 weeks to Aus · free over A$60</dd></div>
+          </dl>
+          <div class="price-row">
+            <div class="price">A$22 <small>AUD</small></div>
+            <span class="ship-nudge">Cute add-on · free ship over A$60</span>
+          </div>
+          <p class="addon-line">Nice with the <strong>Knit Warm Bottle</strong> if you are building a gift pile.</p>
+          <button class="btn btn-block btn-lg add-to-cart" type="button" data-id="silk-eye-mask" data-name="Silk Soft Eye Mask" data-price="22">Add to cart · A$22</button>
+        </div>
+      </article>
+
+      <!-- 4 Patches -->
+      <article class="feature reverse reveal" id="product-patches" data-product-id="warming-patches" data-id="warming-patches" data-name="Warming Patches 10-Pack" data-price="16">
+        <div class="feature-media">
+          <span class="feature-badge lilac">everyday</span>
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+                        <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/carousel/patches-life.jpg" alt="Warming Patches at home" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/patches-product.jpg" alt="Warming Patches pack" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/patches-casual.jpg" alt="Warming Patches on the bench" /></div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="feature-body">
+          <p class="feature-eyebrow">everyday</p>
+          <h3>Warming Patches · 10-Pack</h3>
+          <p class="product-copy">Ten slim adhesive patches you stick under your clothes when you cannot be glued to the couch. Keep a couple in your bag or glovebox.</p>
+          <p class="product-copy">Single use. No charger, no fuss.</p>
+          <dl class="specs">
+            <div><dt>Details</dt><dd>10 adhesive warming patches · single use</dd></div>
+            <div><dt>Shipping</dt><dd>About 1 to 2 weeks to Aus · free over A$60</dd></div>
+          </dl>
+          <div class="price-row">
+            <div class="price">A$16 <small>AUD</small></div>
+            <span class="ship-nudge">Easy add-on · free ship over A$60</span>
+          </div>
+          <p class="addon-line">Pairs fine with the <strong>Warm Glow Belt</strong> for home days.</p>
+          <button class="btn btn-block btn-lg add-to-cart" type="button" data-id="warming-patches" data-name="Warming Patches 10-Pack" data-price="16">Add to cart · A$16</button>
+        </div>
+      </article>
+
+      <!-- 5 Bottle -->
+      <article class="feature reveal" id="product-bottle" data-product-id="knit-warm-bottle" data-id="knit-warm-bottle" data-name="Knit Warm Bottle" data-price="36">
+        <div class="feature-media">
+          <span class="feature-badge">giftable ♡</span>
+          <div class="carousel" data-carousel>
+            <button type="button" class="carousel-btn prev" aria-label="Previous image">‹</button>
+            <button type="button" class="carousel-btn next" aria-label="Next image">›</button>
+                        <div class="carousel-track">
+              <div class="carousel-slide"><img src="assets/carousel/bottle-life.jpg" alt="Knit Warm Bottle on the couch" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/bottle-product.jpg" alt="Knit Warm Bottle close up" /></div>
+              <div class="carousel-slide"><img src="assets/carousel/bottle-casual.jpg" alt="Knit Warm Bottle at home" /></div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+        <div class="feature-body">
+          <p class="feature-eyebrow">giftable ♡</p>
+          <h3>Knit Warm Bottle</h3>
+          <p class="product-copy">Old-school hot water bottle, but in a chunky knit cover so it does not look sad on the end of the bed. Fill, wrap, park it on your belly for a movie.</p>
+          <div class="swatches" aria-label="Colour options">
+            <span class="swatch-label">Cover</span>
+            <button class="swatch active" style="background:#ff7eb3" title="Blush" type="button"></button>
+            <button class="swatch" style="background:#f5e6dc" title="Cream" type="button"></button>
+            <button class="swatch" style="background:#c995e0" title="Lilac" type="button"></button>
+          </div>
+          <dl class="specs">
+            <div><dt>Details</dt><dd>Hot water bottle + knitted cover · blush / cream / lilac cover</dd></div>
+            <div><dt>Shipping</dt><dd>About 1 to 2 weeks to Aus · free over A$60</dd></div>
+          </dl>
+          <div class="price-row">
+            <div class="price">A$36 <small>AUD</small></div>
+            <span class="ship-nudge">Free shipping over A$60</span>
+          </div>
+          <p class="addon-line">Throw in the <strong>Silk Soft Eye Mask</strong> if you are gifting.</p>
+          <button class="btn btn-block btn-lg add-to-cart" type="button" data-id="knit-warm-bottle" data-name="Knit Warm Bottle" data-price="36">Add to cart · A$36</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="mood-band">
+      <div class="mood-band-grid">
+        <img src="assets/lifestyle/cozy-corner.jpg" alt="Cozy self-care corner with blush knit throw" />
+        <div class="mood-caption">
+          <p class="section-label">The vibe</p>
+          <h2>Made for quiet nights in.</h2>
+          <p>Tea, a hoodie, something warm on your belly. Or send a mate a care pack when they are having a week.</p>
+          <a class="btn btn-secondary" href="#shop">Back to the shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <div class="section-inner">
+        <p class="section-label">Shipping</p>
+        <h2 class="section-title">How it gets to you</h2>
+        <div class="how-prose">
+          <p>We do not keep stock in a warehouse here yet. When you order, we pass it to our supplier and they post it your way. Most Australian parcels land in about <strong>1 to 2 weeks</strong>, and you get tracking once it leaves.</p>
+          <p>Free shipping over A$60. Under that it is a flat A$8.95. Customs can be slow sometimes, so we would rather say that upfront than pretend otherwise.</p>
+        </div>
+        <div class="ribbon" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="section-inner">
+        <p class="section-label">FAQ</p>
+        <h2 class="section-title">Quick answers</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How long does shipping take?</summary>
+            <p>Most Aus orders land in 1 to 2 weeks. You get tracking once it leaves the warehouse.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you hold stock in Australia?</summary>
+            <p>Not yet. Dropshipping for now, so we only buy what you have already paid for.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What’s your returns policy?</summary>
+            <p>Unused items in original nick can come back within 30 days. Hit Contact and we will sort it.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are these medical devices?</summary>
+            <p>No. These are comfort products only. Not medicines or medical devices.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I gift these?</summary>
+            <p>Yep. Eye mask, knit bottle and briefs all work as gifts. Gift notes coming once we are on Shopify.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <div class="section-inner">
+        <p class="section-label">Reviews</p>
+        <h2 class="section-title">What people say</h2>
+        <div class="reviews-box">
+          <h3>Nothing here yet</h3>
+          <p>Brand new shop. Real reviews will show up here once people start ordering. We will not invent any.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer-inner">
+      <div>
+        <a class="logo" href="#top">Soft <em>Hours</em></a>
+        <p>Period comfort gear for couch days. Warm, soft, and shipped to Australia.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#shop">All products</a></li>
+            <li><a href="#product-belt">Warm Glow Belt</a></li>
+            <li><a href="#product-gift">Cloud Briefs</a></li>
+            <li><a href="#product-rest">Silk Soft Eye Mask</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#how">Shipping</a></li>
+            <li><a href="#faq">Returns</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="mailto:hello@softhours.example">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="#how">Shipping Policy</a></li>
+            <li><a href="#faq">Returns Policy</a></li>
+            <li><a href="#faq">Privacy</a></li>
+            <li><a href="mailto:hello@softhours.example">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-inner footer-bottom">
+      <span>© 2026 Soft Hours. Comfort products only. Not medical advice.</span>
+      <span>Checkout is a preview until we plug in Shopify or Stripe.</span>
+    </div>
+  </footer>
+
+  <div class="sticky-atc" id="sticky-atc" aria-hidden="true">
+    <div class="sticky-info">
+      <div class="sticky-name" id="sticky-name">Warm Glow Belt</div>
+      <div class="sticky-price" id="sticky-price">A$79</div>
+    </div>
+    <button class="btn add-to-cart" type="button" id="sticky-btn" data-id="warm-glow-belt" data-name="Warm Glow Belt" data-price="79">Add to cart</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Added to cart</div>
+
+  <script src="cart.js"></script>
+  <script src="cart-ui.js"></script>
+  <script>
+    (function () {
+      document.querySelectorAll('.swatch').forEach(function (s) {
+        s.addEventListener('click', function () {
+          const group = s.parentElement;
+          group.querySelectorAll('.swatch').forEach(function (x) { x.classList.remove('active'); });
+          s.classList.add('active');
+        });
+      });
+
+      const menuBtn = document.getElementById('menu-btn');
+      if (menuBtn) {
+        menuBtn.addEventListener('click', function () {
+          const links = document.querySelector('.nav-links');
+          if (!links) return;
+          const open = links.style.display === 'flex';
+          if (open) { links.style.display = 'none'; return; }
+          links.style.display = 'flex';
+          links.style.flexDirection = 'column';
+          links.style.position = 'absolute';
+          links.style.top = '100%';
+          links.style.right = '1rem';
+          links.style.background = '#fff';
+          links.style.padding = '1rem 1.25rem';
+          links.style.borderRadius = '14px';
+          links.style.boxShadow = '0 12px 30px rgba(47,32,48,0.12)';
+          links.style.border = '1px solid #f5cfe0';
+          links.style.zIndex = '90';
+        });
+      }
+
+      const reveals = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) e.target.classList.add('in');
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+
+      const sticky = document.getElementById('sticky-atc');
+      const stickyName = document.getElementById('sticky-name');
+      const stickyPrice = document.getElementById('sticky-price');
+      const stickyBtn = document.getElementById('sticky-btn');
+      const features = document.querySelectorAll('.feature');
+      if (sticky && stickyBtn) {
+        const fio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (!e.isIntersecting) return;
+            const name = e.target.getAttribute('data-name');
+            const price = e.target.getAttribute('data-price');
+            const id = e.target.getAttribute('data-product-id');
+            stickyName.textContent = name;
+            stickyPrice.textContent = 'A$' + price;
+            stickyBtn.setAttribute('data-name', name);
+            stickyBtn.setAttribute('data-price', price);
+            if (id) stickyBtn.setAttribute('data-id', id);
+            stickyBtn.textContent = 'Add to cart';
+            sticky.classList.add('show');
+            sticky.setAttribute('aria-hidden', 'false');
+          });
+        }, { threshold: 0.45 });
+        features.forEach(function (f) { fio.observe(f); });
+
+        const hideStickyIO = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              sticky.classList.remove('show');
+              sticky.setAttribute('aria-hidden', 'true');
+            }
+          });
+        }, { threshold: 0.2 });
+        const hero = document.querySelector('.hero');
+        const footer = document.querySelector('.footer');
+        if (hero) hideStickyIO.observe(hero);
+        if (footer) hideStickyIO.observe(footer);
+      }
+
+      const track = document.getElementById('mood-track');
+      const dots = document.querySelectorAll('.mood-dots span');
+      if (track && dots.length) {
+        track.addEventListener('scroll', function () {
+          const i = Math.round(track.scrollLeft / (track.scrollWidth / 3));
+          dots.forEach(function (d, idx) { d.classList.toggle('on', idx === i); });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout | Soft Hours</title>
+  <meta name="description" content="Soft Hours checkout preview. Payments coming soon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="checkout-page">
+  <div class="announcement"><span>Checkout preview. Free shipping over A$60.</span></div>
+  <header class="nav">
+    <a class="logo" href="index.html">Soft <em>Hours</em></a>
+    <div class="nav-actions">
+      <a class="cart-btn" href="#" data-open-cart aria-label="Cart">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/><path d="M6 6L5 3H2"/></svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="checkout-wrap">
+    <a class="checkout-back" href="index.html">← Back to shop</a>
+
+    <div id="checkout-main">
+      <div class="checkout-grid">
+        <div>
+          <form id="checkout-form" class="form-grid" novalidate>
+            <section class="checkout-card">
+              <h2>Contact</h2>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@email.com" />
+              </div>
+            </section>
+
+            <section class="checkout-card">
+              <h2>Shipping address</h2>
+              <div class="form-row two">
+                <div class="form-field">
+                  <label for="first">First name</label>
+                  <input id="first" name="first" required autocomplete="given-name" />
+                </div>
+                <div class="form-field">
+                  <label for="last">Last name</label>
+                  <input id="last" name="last" required autocomplete="family-name" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="address">Address</label>
+                <input id="address" name="address" required autocomplete="street-address" placeholder="Street address" />
+              </div>
+              <div class="form-field">
+                <label for="suburb">Suburb / City</label>
+                <input id="suburb" name="suburb" required autocomplete="address-level2" />
+              </div>
+              <div class="form-row two">
+                <div class="form-field">
+                  <label for="state">State</label>
+                  <select id="state" name="state" required>
+                    <option value="">Select</option>
+                    <option>NSW</option><option>VIC</option><option>QLD</option><option>WA</option>
+                    <option>SA</option><option>TAS</option><option>ACT</option><option>NT</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="postcode">Postcode</label>
+                  <input id="postcode" name="postcode" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{4}" />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="country">Country</label>
+                <input id="country" name="country" value="Australia" readonly />
+              </div>
+            </section>
+
+            <section class="checkout-card">
+              <h2>Shipping method</h2>
+              <div class="ship-options">
+                <label class="ship-option">
+                  <input type="radio" name="shipmethod" value="standard" checked />
+                  <div>
+                    <strong>Standard</strong>
+                    <span>About 1 to 2 weeks to Australia</span>
+                  </div>
+                  <strong id="ship-price-label">A$8.95</strong>
+                </label>
+                <label class="ship-option">
+                  <input type="radio" name="shipmethod" value="free" id="ship-free" disabled />
+                  <div>
+                    <strong>Free shipping</strong>
+                    <span>On orders over A$60</span>
+                  </div>
+                  <strong>Free</strong>
+                </label>
+              </div>
+            </section>
+
+            <section class="checkout-card">
+              <h2>Payment</h2>
+              <div class="pay-notice">
+                <h3>Payments coming soon</h3>
+                <p>Shopify and Stripe are not hooked up yet, so card payments are off. We do not collect card numbers here.</p>
+              </div>
+              <div class="pay-actions">
+                <button type="button" class="btn btn-block btn-lg btn-disabled" id="pay-btn" disabled>Pay now (unavailable)</button>
+                <button type="submit" class="btn btn-block btn-secondary" id="waitlist-btn">Join the waitlist with your email</button>
+                <p class="waitlist-note">Nothing gets sent to a server. Just a thank-you on this device.</p>
+              </div>
+            </section>
+          </form>
+        </div>
+
+        <aside class="checkout-card checkout-summary" id="order-summary">
+          <h2>Order summary</h2>
+          <div class="summary-lines" id="summary-lines"></div>
+          <div class="summary-totals" id="summary-totals"></div>
+        </aside>
+      </div>
+    </div>
+
+    <div id="confirm-view" class="checkout-card confirm-view" hidden>
+      <div class="check" aria-hidden="true">✓</div>
+      <h2>You are on the list</h2>
+      <p id="confirm-msg">Thanks. We will be ready when payments go live. Nothing was charged and nothing was sent anywhere.</p>
+      <a class="btn" href="index.html">Back to shopping</a>
+      <button type="button" class="cart-continue" id="clear-after" style="margin-top:1rem">Clear bag and start fresh</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+  <script src="cart-ui.js"></script>
+  <script>
+    (function () {
+      const Cart = window.SoftHoursCart;
+      const linesEl = document.getElementById('summary-lines');
+      const totalsEl = document.getElementById('summary-totals');
+      const shipPrice = document.getElementById('ship-price-label');
+      const shipFree = document.getElementById('ship-free');
+      const form = document.getElementById('checkout-form');
+      const main = document.getElementById('checkout-main');
+      const confirmView = document.getElementById('confirm-view');
+      const confirmMsg = document.getElementById('confirm-msg');
+
+      function renderSummary() {
+        const items = Cart.getItems();
+        const sub = Cart.subtotal(items);
+        const ship = Cart.shippingFor(sub);
+        const tot = sub + ship;
+
+        if (!items.length) {
+          linesEl.innerHTML = '<p class="waitlist-note">Your bag is empty. <a href="index.html">Go add something</a>.</p>';
+          totalsEl.innerHTML = '';
+          shipPrice.textContent = Cart.moneyFixed(Cart.FLAT_SHIP);
+          shipFree.disabled = true;
+          return;
+        }
+
+        linesEl.innerHTML = items.map(function (i) {
+          const colour = (i.colour && i.colour !== 'Default') ? (' · ' + i.colour) : '';
+          return '<div class="summary-line"><img src="' + i.image + '" alt=""><div><strong>' + i.name + '</strong><span>Qty ' + i.qty + colour + '</span></div><strong>' + Cart.moneyFixed(i.price * i.qty) + '</strong></div>';
+        }).join('');
+
+        totalsEl.innerHTML = [
+          '<div class="muted"><span>Subtotal</span><span>' + Cart.moneyFixed(sub) + '</span></div>',
+          '<div class="muted"><span>Shipping</span><span>' + (ship === 0 ? 'Free' : Cart.moneyFixed(ship)) + '</span></div>',
+          '<div class="grand"><span>Total</span><span>' + Cart.moneyFixed(tot) + '</span></div>'
+        ].join('');
+
+        if (ship === 0) {
+          shipPrice.textContent = 'Free';
+          shipFree.disabled = false;
+          shipFree.checked = true;
+        } else {
+          shipPrice.textContent = Cart.moneyFixed(Cart.FLAT_SHIP);
+          shipFree.disabled = true;
+          document.querySelector('input[name="shipmethod"][value="standard"]').checked = true;
+        }
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!Cart.getItems().length) {
+          alert('Your bag is empty.');
+          return;
+        }
+        if (!form.reportValidity()) return;
+        const email = document.getElementById('email').value.trim();
+        // Local thank-you only
+        main.hidden = true;
+        confirmView.hidden = false;
+        confirmMsg.textContent = 'Thanks' + (email ? ', ' + email : '') + '. You are on the Soft Hours waitlist preview. Nothing was charged and nothing was sent anywhere.';
+      });
+
+      document.getElementById('clear-after').addEventListener('click', function () {
+        Cart.clear();
+        location.href = 'index.html';
+      });
+
+      renderSummary();
+      window.addEventListener('softhours:cart', renderSummary);
+    })();
+  </script>
+</body>
+</html>
